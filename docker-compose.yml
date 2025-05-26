@@ -1,0 +1,16 @@
+# version: '3'
+services:
+  mlbook-env:
+    build: ./Docker/
+    ports:
+      - "8888:8888"  # Jupyter用
+    volumes:
+      - ./notebook:/home/jovyan/work/notebook
+      - ./codes:/home/jovyan/work/codes
+      - ./others:/home/jovyan/work/others
+      - ./results:/home/jovyan/work/results
+    container_name: jupyter-mlbook-env
+
+    # 以下のコマンドで、初期設定(start-notebook.sh)と、ログイン不要設定を行う
+    # ref:https://qiita.com/SolKul/items/32443fb4452f7194bb8c
+    command: start-notebook.sh --NotebookApp.token=''

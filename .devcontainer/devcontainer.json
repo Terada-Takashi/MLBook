@@ -1,0 +1,16 @@
+{
+    "name": "ML Dev Container",
+    "context": "..",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "mlbook-env",
+    "workspaceFolder": "/home/jovyan/work",
+    "extensions": [
+      "ms-python.python",
+      "ms-toolsai.jupyter"
+    ],
+    "settings": {
+      "python.pythonPath": "/opt/conda/bin/python"
+    },
+    "postCreateCommand": "jupyter notebook --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.password=''"
+  }
+  
