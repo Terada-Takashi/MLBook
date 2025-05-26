@@ -100,8 +100,8 @@ class logisticRegression():
         plt.yticks([0,0.5,1])
         plt.ylim([-0.1,1.1])
         plt.xlim([np.min(X),np.max(X)])
-        plt.xlabel(xLabel,fontSize=14)
-        plt.ylabel(yLabel,fontSize=14)
+        plt.xlabel(xLabel,fontsize=14)
+        plt.ylabel(yLabel,fontsize=14)
         plt.grid()
         plt.legend()
 
@@ -144,9 +144,9 @@ class logisticRegression():
         # 各軸の範囲とラベルの設定
         plt.xlim([np.min(X[:,0]),np.max(X[:,0])])
         plt.ylim([np.min(X[:,1]),np.max(X[:,1])])
-        plt.title(title,fontSize=14)
-        plt.xlabel(xLabel,fontSize=14)
-        plt.ylabel(yLabel,fontSize=14)
+        plt.title(title,fontsize=14)
+        plt.xlabel(xLabel,fontsize=14)
+        plt.ylabel(yLabel,fontsize=14)
         plt.legend()
 
         # グラフの表示またはファイルへの保存
@@ -170,8 +170,8 @@ class logisticRegression():
         plt.plot(teEval,'r',label="評価")
         
         # 各軸の範囲とラベルの設定
-        plt.xlabel("反復",fontSize=14)
-        plt.ylabel(ylabel,fontSize=14)
+        plt.xlabel("反復",fontsize=14)
+        plt.ylabel(ylabel,fontsize=14)
         plt.ylim([0,1.1])
         plt.legend()
         
