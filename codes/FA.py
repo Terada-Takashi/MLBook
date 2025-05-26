@@ -67,7 +67,7 @@ class FA:
         ax.yaxis.set_ticks_position('left')
         
         # 各特徴量の因子負荷量を点でプロット
-        plt.plot(self.W[0,:],self.W[1,:],'ro',markerSize=14)
+        plt.plot(self.W[0,:],self.W[1,:],'ro',markersize=14)
         
         # 各特徴量をテキストでプロット
         for ind in range(self.W.shape[1]):
@@ -78,8 +78,8 @@ class FA:
             plt.text(self.W[0,ind]+0.05,self.W[1,ind],label,size=14)
         
         # 各軸の範囲とラベルの設定
-        ax.set_xlabel("第1因子負荷量",fontSize=14)
-        ax.set_ylabel("第2因子負荷量",fontSize=14)
+        ax.set_xlabel("第1因子負荷量",fontsize=14)
+        ax.set_ylabel("第2因子負荷量",fontsize=14)
         ax.xaxis.set_label_coords(0.8,0.55)
         ax.yaxis.set_label_coords(0.55,0.8)
 

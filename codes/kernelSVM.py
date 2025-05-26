@@ -93,8 +93,8 @@ class SVM():
         plt.close()
         
         # 真値のプロット（クラスごとにマーカーを変更）
-        plt.plot(X[Y[:,0]==-1,0],X[Y[:,0]==-1,1],'cx',markerSize=14,label="カテゴリ-1")
-        plt.plot(X[Y[:,0]== 1,0],X[Y[:,0]== 1,1],'m.',markerSize=14,label="カテゴリ+1")
+        plt.plot(X[Y[:,0]==-1,0],X[Y[:,0]==-1,1],'cx',markersize=14,label="カテゴリ-1")
+        plt.plot(X[Y[:,0]== 1,0],X[Y[:,0]== 1,1],'m.',markersize=14,label="カテゴリ+1")
 
         # 予測値のメッシュの計算
         X1,X2 = plt.meshgrid(plt.linspace(np.min(X[:,0]),np.max(X[:,0]),50),plt.linspace(np.min(X[:,1]),np.max(X[:,1]),50))
@@ -122,9 +122,9 @@ class SVM():
         # 各軸の範囲、タイトルおよびラベルの設定
         plt.xlim([np.min(X[:,0]),np.max(X[:,0])])
         plt.ylim([np.min(X[:,1]),np.max(X[:,1])])
-        plt.title(title,fontSize=14)
-        plt.xlabel(xLabel,fontSize=14)
-        plt.ylabel(yLabel,fontSize=14)
+        plt.title(title,fontsize=14)
+        plt.xlabel(xLabel,fontsize=14)
+        plt.ylabel(yLabel,fontsize=14)
         plt.legend()
 
         # グラフの表示またはファイルへの保存

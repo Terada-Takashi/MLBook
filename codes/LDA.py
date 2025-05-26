@@ -73,16 +73,16 @@ class LDA():
         X2 = (np.matmul(self.m,self.w)[0] - X1*self.w[0])/self.w[1]
 
         # データと線形モデルのプロット
-        plt.plot(X[Y[:,0]==-1,0],X[Y[:,0]==-1,1],'cx',markerSize=14,label="カテゴリ-1")
-        plt.plot(X[Y[:,0]==1,0],X[Y[:,0]==1,1],'m.',markerSize=14,label="カテゴリ+1")
-        plt.plot(self.m[0,0],self.m[0,1],'ko',markerSize=12,label="全体の平均")
+        plt.plot(X[Y[:,0]==-1,0],X[Y[:,0]==-1,1],'cx',markersize=14,label="カテゴリ-1")
+        plt.plot(X[Y[:,0]==1,0],X[Y[:,0]==1,1],'m.',markersize=14,label="カテゴリ+1")
+        plt.plot(self.m[0,0],self.m[0,1],'ko',markersize=12,label="全体の平均")
         plt.plot(X1,X2,'r-',label="f(x)")
         
         # 各軸の範囲とラベルの設定
         plt.xlim([np.min(X[:,0]),np.max(X[:,0])])
         plt.ylim([np.min(X[:,1]),np.max(X[:,1])])
-        plt.xlabel(xLabel,fontSize=14)
-        plt.ylabel(yLabel,fontSize=14)
+        plt.xlabel(xLabel,fontsize=14)
+        plt.ylabel(yLabel,fontsize=14)
         plt.legend()
 
         # グラフの表示またはファイルへの保存

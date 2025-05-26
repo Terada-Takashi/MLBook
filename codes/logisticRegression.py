@@ -125,8 +125,8 @@ class logisticRegression():
         plt.close()
         
         # 真値のプロット（クラスごとにマーカーを変更）
-        plt.plot(X[Y[:,0]==0,0],X[Y[:,0]==0,1],'cx',markerSize=14,label="ラベル0")
-        plt.plot(X[Y[:,0]==1,0],X[Y[:,0]==1,1],'m.',markerSize=14,label="ラベル1")
+        plt.plot(X[Y[:,0]==0,0],X[Y[:,0]==0,1],'cx',markersize=14,label="ラベル0")
+        plt.plot(X[Y[:,0]==1,0],X[Y[:,0]==1,1],'m.',markersize=14,label="ラベル1")
 
         # 予測値のメッシュの計算
         X1,X2 = plt.meshgrid(plt.linspace(np.min(X[:,0]),np.max(X[:,0]),50),plt.linspace(np.min(X[:,1]),np.max(X[:,1]),50))
