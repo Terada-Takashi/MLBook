@@ -86,7 +86,7 @@ print(f"選択したパラメータ:{selectedParam}")
 
 #-------------------
 # 3.75 正解率のプロット
-plt.plot(kernelParams,np.mean(accuracies,axis=1),'r-o',lineWidth=2)
+plt.plot(kernelParams,np.mean(accuracies,axis=1),'r-o',linewidth=2)
 plt.xlabel("カーネルパラメータ",fontsize=14)
 plt.ylabel("推定した正解率",fontsize=14)
 plt.savefig(f"../results/kernelSVM_CV_{myData.dataType}_{kernelType}.pdf")

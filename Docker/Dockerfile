@@ -6,6 +6,16 @@ FROM jupyter/datascience-notebook
 # ポート公開
 EXPOSE 8888
 
+# CVXOPTライブラリをインストールする
+RUN conda update -y -n base -c  conda-forge conda \
+&&  conda install -y -c conda-forge cvxopt \
+&& pip install --upgrade pip \
+# とりあえずこれ↓はいけそう
+&&  pip install gym 
+# これはいけなさそう↓. python3.11 に非対応っぽい
+# && conda install -c conda-forge -y gym \ 
+# && conda install -y -c conda-forge pygame
+
 #コンテナ起動後のユーザをrootにする
 # ref:https://qiita.com/SolKul/items/32443fb4452f7194bb8c
 USER root
